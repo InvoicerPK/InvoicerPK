@@ -920,3 +920,287 @@ body .page-component__bg_overlay_box {
 .app-access-actions {
     margin: 20px auto;
 }
+
+/* Responsive Navigation Styles */
+@media (max-width: 768px) {
+    #uni-navigation-bar.nav-02 {
+        padding: 15px 0;
+    }
+    
+    #uni-navigation-bar .nav-02__box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    #uni-navigation-bar .nav-02__logo {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    #uni-navigation-bar .nav-02__logo_img {
+        max-width: 120px;
+        height: auto;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-end;
+        font-size: 0.9em;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp a {
+        font-size: 0.9em;
+        padding: 4px 8px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp span {
+        margin-left: 0.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    #uni-navigation-bar.nav-02 {
+        padding: 10px 0;
+    }
+    
+    #uni-navigation-bar .nav-02__box {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    #uni-navigation-bar .nav-02__logo {
+        flex: none;
+        text-align: center;
+    }
+    
+    #uni-navigation-bar .nav-02__logo_img {
+        max-width: 100px;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp a {
+        font-size: 0.8em;
+        padding: 6px 10px;
+        min-width: 120px;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    #uni-navigation-bar .nav-02__whatsapp {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp a {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Header responsive adjustments */
+@media (max-width: 768px) {
+    #header-23-783111 .header-23__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    #header-23-783111 .header-23__left {
+        order: 2;
+        text-align: center;
+    }
+    
+    #header-23-783111 .header-23__right {
+        order: 1;
+        width: 100%;
+    }
+    
+    #header-23-783111 .header-23__video-wrapper {
+        max-width: 100%;
+    }
+    
+    .app-access-actions {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .app-access-actions .button {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    #header-23-783111 .page-component__wrapper {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    
+    .app-access-actions {
+        gap: 12px;
+    }
+    
+    .app-access-actions .button {
+        max-width: 200px;
+        font-size: 0.9em;
+        padding: 10px 20px;
+    }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 768px) {
+    .container--large {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header-23__heading {
+        font-size: 2.5rem !important;
+        line-height: 1.2;
+    }
+    
+    .header-23__text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .container--large {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .header-23__heading {
+        font-size: 2rem !important;
+        line-height: 1.3;
+    }
+    
+    .header-23__text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .footer-02 {
+        padding: 20px 0;
+    }
+    
+    .footer-02__text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-23__heading {
+        font-size: 1.8rem !important;
+    }
+    
+    .header-23__text {
+        font-size: 0.9rem;
+    }
+    
+    .container--large {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+    .button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Ensure proper spacing for mobile navigation */
+@media (max-width: 480px) {
+    body {
+        padding-top: 0;
+    }
+    
+    #uni-navigation-bar.nav-02--sticky {
+        position: relative;
+    }
+}
+
+/* Navigation scroll effect */
+#uni-navigation-bar.nav-02.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Button loading animation */
+.button.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced mobile touch feedback */
+@media (max-width: 768px) {
+    #uni-navigation-bar .nav-02__whatsapp a {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    
+    #uni-navigation-bar .nav-02__whatsapp a:active {
+        transform: scale(0.95);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .button {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+    
+    .button:active {
+        transform: scale(0.98);
+    }
+}

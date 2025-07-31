@@ -117,3 +117,76 @@ sizes="${i.sizes}"`));e=$(`
             <h3 class="js-post-item__title post-item__title">${e.title}</h3>
           </a>
         `);o.append(e),window.blogHomeData.currentPostsCount+=1})},r=()=>{window.blogHomeData.isPostsLoading=!0;let e=`${window.blogHomeData.apiBase}/api/v1/blog_posts/get_posts_for_homepage/${window.blogHomeData.websiteSubdomain}?current_posts_count=${window.blogHomeData.currentPostsCount}&path=${window.blogHomeData.path}&new_posts_count=15&render_time=`+window.blogHomeData.renderTime;window.blogHomeData.isImageOptimizationOn&&(e+="&is_image_optimization_on=true"),$.ajax({type:"GET",url:e,cache:!1,contentType:"application/json"}).done(e=>{var t=n.offset().top;if(t&&window.scrollY>=t&&$(window).scrollTop(t-160),i(e),window.blogHomeData.currentPostsCount>=window.blogHomeData.totalPostsCount||0===e.length)return n.remove(),void o.disconnect();window.blogHomeData.isPostsLoading=!1}).fail(e=>{console.error("error: ",e),window.blogHomeData.isPostsLoading=!1})},o=new IntersectionObserver((e,t)=>{e.forEach(e=>{e.isIntersecting&&!window.blogHomeData.isPostsLoading&&r()})});0<n.length&&o.observe(n[0]),window.unicornplatform.loadMorePosts=r,window.unicornplatform.renderBlogPosts=i}),inputElements=(initLoadMore(),document.querySelectorAll(".js-file-input"));inputElements.forEach(e=>{const t=parseInt(e.dataset.maxFiles||1);var n=(e.dataset.allowedFileTypes||"").toString().toLowerCase().replace(/ /g,"").split(";").filter(e=>!!e),i=e.dataset.apibase||"https://app.unicornplatform.com",e=FilePond.create(e,{server:i+"/api/v1/meta/upload_file_to_cdn",credits:!1,allowReorder:!0,maxFileSize:"10MB",maxFiles:t,acceptedFileTypes:n,allowMultiple:1<t,onwarning:e=>{console.log("error: ",e),e&&"Max files"===e.body&&alert(`Error: You can upload up to ${t} files.`)}});window.filepondRefs?window.filepondRefs.push(e):window.filepondRefs=[e]})});window.isJsDelayed?(main(),document.dispatchEvent(window.unicornJsLoadedEvent)):window.addEventListener("DOMContentLoaded",()=>{main(),document.dispatchEvent(window.unicornJsLoadedEvent)});var widgets={bindClose:function(){$(document).on("click",".js-close-widget",function(e){e.preventDefault();e=$(this).attr("data-widget-id");$("#"+e).toggleClass("state-visible"),localStorage["unicorn-widget-"+e]="hidden"})},bindInit:function(){var e,t=$(".js-widget");0<t.length&&(e=t.attr("id"),"hidden"!==localStorage["unicorn-widget-"+e]&&setTimeout(function(){t.toggleClass("state-visible")},2e3))}},languageSwitchHreflangs=(widgets.bindClose(),widgets.bindInit(),{bind:function(){if(0<$(".js-lang-widget").length){let n=$(".js-language-link");if(0<n.length){let t=$('link[rel="alternate"]');if(0<t.length)for(let e=0;e<t.length;e++){var i=t.eq(e).attr("hreflang"),r=t.eq(e).attr("href");if(i&&""!==i&&r&&""!==r)for(let t=0;t<n.length;t++){let e=n.eq(t);e.attr("data-lang-code")===i&&e.attr("href",r)}}}}}});languageSwitchHreflangs.bind();
+
+// Mobile Navigation Enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add touch-friendly interactions for navigation
+    const navBar = document.getElementById('uni-navigation-bar');
+    if (navBar) {
+        // Add scroll effect for navigation
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navBar.classList.add('scrolled');
+            } else {
+                navBar.classList.remove('scrolled');
+            }
+        });
+
+        // Improve touch targets on mobile
+        const navLinks = navBar.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.95)';
+            });
+            
+            link.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    }
+
+    // Add loading animation for buttons
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (!this.classList.contains('loading')) {
+                this.classList.add('loading');
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                }, 1000);
+            }
+        });
+    });
+
+    // Optimize video loading for mobile
+    const videoIframe = document.querySelector('.header-23__video-aspect iframe');
+    if (videoIframe && window.innerWidth <= 768) {
+        // Lazy load video on mobile
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const src = videoIframe.getAttribute('data-src') || videoIframe.src;
+                    if (src && !videoIframe.src.includes(src)) {
+                        videoIframe.src = src;
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        observer.observe(videoIframe);
+    }
+});
