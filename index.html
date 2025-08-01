@@ -1,161 +1,166 @@
 <!DOCTYPE html>
-<html class="style-blue-1  custom-colors-enabled  custom_fonts comps live_website unicorn-platform-website" lang="en">
-
-
+<html lang="en">
 <head>
-
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/styles.css" />
-
-
-
-    <script>
-        window.isJsDelayed = false;
-    </script>
-    <script src="js/main.js" defer></script>
-
-
-    <link href="https://fonts.googleapis.com/css?family=Figtree:700|Figtree:400,700&display=swap" rel="stylesheet" />
-
-
+    
+    <!-- Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16" />
-
+    
+    <!-- Meta tags -->
     <meta property="og:type" content="website">
-
-
     <title>Smart Invoicing Solution with Seamless FBR Integration - INVOICER.PK</title>
     <meta property="og:title" content="INVIOCES.PK - Smart Invoicing Solution with Seamless FBR Integration" />
     <meta name="twitter:title" content="INVIOCES.PK - Smart Invoicing Solution with Seamless FBR Integration" />
-
-
-
-    <meta name="description"
-        content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices.">
-    <meta property="og:description"
-        content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices." />
-    <meta name="twitter:description"
-        content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices." />
-
-
-
+    
+    <meta name="description" content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices.">
+    <meta property="og:description" content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices." />
+    <meta name="twitter:description" content="Transform your invoicing process with our innovative app that integrates directly with the FBR. Experience hassle-free compliance and efficiency in managing your sales invoices." />
+    
     <meta property="og:image" content="images/invoicer-logo.png" />
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="images/invoicer-logo.png">
-
-
-
+    
     <link href="https://invoicer.pk" rel="canonical">
     <meta name="twitter:url" content="https://invoicer.pk">
     <meta property="og:url" content="https://invoicer.pk">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'figtree': ['Figtree', 'Helvetica', 'serif'],
+                    },
+                    colors: {
+                        'primary': '#00396B',
+                        'accent': '#25D366',
+                        'light-blue': '#E5F0FF',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: 'Figtree', Helvetica, serif;
+        }
 
-
-
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 400!important;
+        }
+    </style>
 </head>
 
-<body
-    class="custom-google-fonts-enabled comps has-fontSizeH1 has-fontSizeH2 has-fontSizeH3 has-buttonRadius has-buttonShadow has-buttonFontSize has-fontSizeContent has-buttonFontWeight has-fontSizeParagraphs has-buttonVerticalPadding has-buttonHorizontalPadding has-buttonShadow--none "
-    id="305360-680273">
-
-    <nav id="uni-navigation-bar" class="nav-02 nav-02--sticky nav-02--sticky--white">
-        <div class="container container--large">
-            <div class="nav-02__box">
-                <div class="nav-02__logo">
-                    <a aria-label="Home" class="nav-02__link" href="/" target="_self">
-                        <img class="nav-02__logo_img" height="50" alt="Logo" src="images/invoicer-logo.png" />
+<body class="bg-white font-figtree">
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-4 sm:py-0 sm:h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 mb-4 sm:mb-0">
+                    <a href="/" class="flex items-center">
+                        <img class="h-12 w-auto" src="images/invoicer-logo.png" alt="INVOICER.PK Logo" />
                     </a>
                 </div>
-                <div class="nav-02__whatsapp" style="margin-left: auto; display: flex; align-items: center; gap: 1.2em;">
-          <a href="mailto:help@invoicer.pk" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: #00396B; font-weight: 600; font-size: 1.1em;">
-            <span style="display: flex; align-items: center;">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" rx="12" fill="#E5F0FF"/>
-                <path d="M6 8.5V15.5C6 16.0523 6.44772 16.5 7 16.5H17C17.5523 16.5 18 16.0523 18 15.5V8.5C18 7.94772 17.5523 7.5 17 7.5H7C6.44772 7.5 6 7.94772 6 8.5Z" stroke="#00396B" stroke-width="1.5"/>
-                <path d="M6.75 8.75L12 12.25L17.25 8.75" stroke="#00396B" stroke-width="1.5"/>
-              </svg>
-            </span>
-            <span style="margin-left: 0.5em; color: #222;">help@invoicer.pk</span>
-          </a>
-          <a href="https://wa.me/923210566619" target="_blank" rel="noopener" style="display: flex; align-items: center; text-decoration: none; color: #25D366; font-weight: 600; font-size: 1.1em;">
-            <span style="display: flex; align-items: center;">
-              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="16" cy="16" r="16" fill="#25D366"/>
-                <path d="M23.472 19.339c-.355-.177-2.104-1.037-2.43-1.156-.326-.119-.563-.177-.8.178-.237.355-.914 1.156-1.122 1.393-.208.237-.414.267-.769.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.208-.356-.022-.548.156-.725.16-.159.355-.414.533-.622.178-.208.237-.355.355-.592.119-.237.06-.444-.03-.622-.089-.178-.8-1.924-1.096-2.637-.288-.692-.58-.597-.8-.608-.208-.009-.444-.011-.68-.011-.237 0-.622.089-.948.444-.326.355-1.24 1.212-1.24 2.956 0 1.744 1.27 3.429 1.447 3.667.178.237 2.5 3.82 6.063 5.209.849.292 1.51.466 2.027.596.852.204 1.627.175 2.24.106.683-.077 2.104-.86 2.403-1.693.296-.833.296-1.547.207-1.693-.089-.148-.326-.237-.68-.414z" fill="#fff"/>
-              </svg>
-            </span>
-            <span style="margin-left: 0.5em; color: #222;">0321 05666 19</span>
-          </a>
-        </div>
+                
+                <!-- Contact Links -->
+                <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+                    <!-- Email -->
+                    <a href="mailto:help@invoicer.pk" target="_blank" rel="noopener" 
+                       class="flex items-center text-primary font-semibold text-lg hover:text-primary/80 transition-colors">
+                        <span class="flex items-center">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="12" fill="#E5F0FF"/>
+                                <path d="M6 8.5V15.5C6 16.0523 6.44772 16.5 7 16.5H17C17.5523 16.5 18 16.0523 18 15.5V8.5C18 7.94772 17.5523 7.5 17 7.5H7C6.44772 7.5 6 7.94772 6 8.5Z" stroke="#00396B" stroke-width="1.5"/>
+                                <path d="M6.75 8.75L12 12.25L17.25 8.75" stroke="#00396B" stroke-width="1.5"/>
+                            </svg>
+                        </span>
+                        <span class="ml-2 text-gray-800">help@invoicer.pk</span>
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/923210566619" target="_blank" rel="noopener" 
+                       class="flex items-center text-accent font-semibold text-lg hover:text-accent/80 transition-colors">
+                        <span class="flex items-center">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16" cy="16" r="16" fill="#25D366"/>
+                                <path d="M23.472 19.339c-.355-.177-2.104-1.037-2.43-1.156-.326-.119-.563-.177-.8.178-.237.355-.914 1.156-1.122 1.393-.208.237-.414.267-.769.089-.355-.178-1.5-.553-2.86-1.763-1.057-.944-1.77-2.108-1.98-2.463-.208-.356-.022-.548.156-.725.16-.159.355-.414.533-.622.178-.208.237-.355.355-.592.119-.237.06-.444-.03-.622-.089-.178-.8-1.924-1.096-2.637-.288-.692-.58-.597-.8-.608-.208-.009-.444-.011-.68-.011-.237 0-.622.089-.948.444-.326.355-1.24 1.212-1.24 2.956 0 1.744 1.27 3.429 1.447 3.667.178.237 2.5 3.82 6.063 5.209.849.292 1.51.466 2.027.596.852.204 1.627.175 2.24.106.683-.077 2.104-.86 2.403-1.693.296-.833.296-1.547.207-1.693-.089-.148-.326-.237-.68-.414z" fill="#fff"/>
+                            </svg>
+                        </span>
+                        <span class="ml-2 text-gray-800">0321 05666 19</span>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="page-component__bg_image_box bg-white-color header-23-parent is-first-component" id="header-23-783111">
-
-        <div class="page-component__wrapper" style="z-index: 10; padding-top:70px; padding-bottom:70px;">
-
-            <header class="header-23">
-                <div class="container container--large header-23__container">
-                    <div class="header-23__left">
-                        <div class="header-23__left_content">
-
-
-                            <h1 class="title-text heading heading--accent header-23__heading">Simplify Invoicing with
-                                Seamless FBR Integration</h1>
-
-                            <div class="subtitle-text header-23__text content_box">
-                                <p>Our invoice generating app streamlines the process of creating and submitting
-                                    invoices. With seamless FBR integration, you can ensure compliance with government
-                                    regulations effortlessly. Experience a hassle-free way to manage your sales and
-                                    taxes.</p>
-                            </div>
-
-                            <div class="app-access-actions">
-                                <a class="button button--accent-bg" href="https://app.invoicer.pk" target="_blank">
-                                    <span class="button__text">Login to Dashboard</span>
-                                    <span class="icon"><svg viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z"
-                                                fill-rule="nonzero" fill="#00396B" class="fill-main" />
-                                        </svg></span>
-                                </a>&nbsp;
-                                <a href="https://app.invoicer.pk/#/register" target="_blank">Request access</a>
-                            </div>
-
-                        </div>
+    <!-- Hero Section -->
+    <div class="bg-white py-16 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+                        Simplify Invoicing with
+                        <span class="text-primary">Seamless FBR Integration</span>
+                    </h1>
+                    
+                    <div class="text-lg lg:text-xl text-gray-600 leading-relaxed">
+                        <p>Our invoice generating app streamlines the process of creating and submitting
+                            invoices. With seamless FBR integration, you can ensure compliance with government
+                            regulations effortlessly. Experience a hassle-free way to manage your sales and
+                            taxes.</p>
                     </div>
-                    <div class="header-23__right">
-                        <div class="header-23__video-wrapper">
-                            <div class="header-23__video-aspect">
-                                <iframe src="https://www.loom.com/embed/c5753dd3b2d2473e89eb4688f7856d8b?sid=0aedbb93-b683-434f-a7cd-33011cd900f6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-                                <!--
-                                <iframe class="header-23__video" src="https://www.youtube.com/embed/HfACrKJ_Y2w"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                                    -->
-                            </div>
-                        </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://app.invoicer.pk" target="_blank" 
+                           class="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
+                            <span>Login to Dashboard</span>
+                            <svg class="ml-2 w-5 h-5" viewBox="0 0 13 10" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.823 4.164L8.954.182a.592.592 0 0 0-.854 0 .635.635 0 0 0 0 .88l2.836 2.92H.604A.614.614 0 0 0 0 4.604c0 .344.27.622.604.622h10.332L8.1 8.146a.635.635 0 0 0 0 .88.594.594 0 0 0 .854 0l3.869-3.982a.635.635 0 0 0 0-.88z" fill-rule="nonzero" fill="currentColor" />
+                            </svg>
+                        </a>
+                        
+                        <a href="https://app.invoicer.pk/#/register" target="_blank" 
+                           class="inline-flex items-center px-8 py-4 text-primary font-semibold hover:text-primary/80 transition-colors">
+                            Request access
+                        </a>
                     </div>
                 </div>
-            </header>
+                
+                <!-- Right Content - Video -->
+                <div class="relative">
+                    <div class="aspect-video overflow-hidden">
+                        <iframe 
+                            src="https://www.loom.com/embed/c5753dd3b2d2473e89eb4688f7856d8b?sid=0aedbb93-b683-434f-a7cd-33011cd900f6" 
+                            frameborder="0" 
+                            webkitallowfullscreen 
+                            mozallowfullscreen 
+                            allowfullscreen 
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="bg-white-color ">
-        <footer class="footer-02" id="footer" style="">
-            <div class="container">
-                <div class="footer-02__wrapper">
-                    <div class="content-text footer-02__text content_box">&copy; 2025&nbsp;All rights reserved.</div>
-                </div>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center text-gray-600">
+                &copy; 2025 All rights reserved.
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
-
 </html>
